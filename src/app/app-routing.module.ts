@@ -17,6 +17,10 @@ const routes:Routes =[
     component:AboutComponent
   },
   {
+    path:'post',
+    loadChildren: ()=>import('./pages/post/post.module').then(m=>m.PostModule)
+  },
+  {
     path: '**',
     redirectTo:'home'
   }
